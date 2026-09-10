@@ -1,6 +1,8 @@
 package com.javarush.games.racer;
 
-import com.javarush.engine.cell.*;
+import com.javarush.engine.cell.Color;
+import com.javarush.engine.cell.Game;
+import com.javarush.engine.cell.Key;
 import com.javarush.games.racer.road.RoadManager;
 
 public class RacerGame extends Game {
@@ -131,5 +133,8 @@ public class RacerGame extends Game {
         isGameStopped = true;
         showMessageDialog(Color.BLACK, "You win!", Color.GREEN, 75);
         stopTurnTimer();
+    }
+    public static void main(String[] args) {
+        javafx.application.Application.launch(RacerGame.class, args);
     }
 }
